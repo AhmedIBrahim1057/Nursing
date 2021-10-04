@@ -1,8 +1,8 @@
 <template>
   <router-view/>
-  <div id="nav">
-    <button class="btn btn-primary" @click="prev">prev</button>
-    <button class="btn btn-primary" @click="next">next</button>
+  <div id="nav-btns" class="w-100 text-center">
+    <button class="btn btn-primary mx-2" @click="prev">prev</button>
+    <button class="btn btn-primary mx-2" @click="next">next</button>
   </div>
 </template>
 
@@ -44,4 +44,8 @@ export default {
 
 <style>
 @import './main.css';
+.container{
+  height: 95vh !important;
+}
+
 </style>

@@ -1,6 +1,12 @@
 <template>
-  <div class="preRequisites" v-for="requisite in pre_requisites" :key="requisite.id">
-    <p>{{requisite.requisite}}</p>
+  <div class="preRequisites">
+    <div class="container">
+      <div class="row" v-for="requisite in pre_requisites" :key="requisite.id">
+        <div class="col-12">
+          <p>{{requisite.requisite}}</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 

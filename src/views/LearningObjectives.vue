@@ -1,6 +1,10 @@
 <template>
-  <div class="learningObjectives" v-for="objective in learning_objectives" :key="objective.id">
-    <p>{{objective.objective}}</p>
+  <div class="learningObjectives">
+    <div class="container">
+      <div class="row" v-for="objective in learning_objectives" :key="objective.id">
+        <div class="col-12">{{objective.objective}}</div>
+      </div>
+    </div>
   </div>
 </template>
 
