@@ -1,9 +1,19 @@
 <template>
-  <div class="learningObjectives">
-    <div class="container">
-      <div class="row" v-for="objective in learning_objectives" :key="objective.id">
-        <div class="col-12">{{objective.objective}}</div>
+  <div class="learningObjectives h-100">
+    <div class="container h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="row" >
+          <div class="col-12">
+            <h1 class="mb-3 mb-md-5">Learning Objectives</h1>
+            <ul>
+              <li v-for="objective in learning_objectives" :key="objective.id" class="my-2">
+                {{objective.objective}}
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+     
     </div>
   </div>
 </template>
@@ -26,3 +36,6 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+</style>

@@ -5,8 +5,11 @@ import axios from '@/axios'
   state: {
     step: 0,
     allowStep: true,
+    allowNext: true,
+    allowPrev: true,
     learning_objectives: [],
     pre_requisites: [],
+    conclusion: null,
     patientHistory: {
       id: 1,
       name: null,
@@ -17,7 +20,8 @@ import axios from '@/axios'
   getters:{
     learningObjectives: state => state.learning_objectives,
     preRequisites: state => state.pre_requisites,
-    patientHistory: state => state.patientHistory
+    patientHistory: state => state.patientHistory,
+    conclusion: state => state.conclusion
   },
   mutations: {
     SET_LEARNING_OBJECTIVES(state, learning_objectives){
@@ -26,9 +30,7 @@ import axios from '@/axios'
     SET_PRE_REQUISITES(state, pre_requisites){
       state.pre_requisites = pre_requisites
     },
-    // SET_PATIENT_HISTORY(state, patientHistory){
-    //   state.patientHistory = patientHistory
-    // }
+    
   },
   actions: {
     async getExperimentData({ commit }){
@@ -38,6 +40,7 @@ import axios from '@/axios'
         this.state.patientHistory.name = response.data.name
         this.state.patientHistory.age = response.data.age
         this.state.patientHistory.incident_description = response.data.incident_description
+        this.state.conclusion = response.data.conclusion
       })
     },
     

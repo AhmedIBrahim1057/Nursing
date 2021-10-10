@@ -5,7 +5,7 @@ import store from '../store/store'
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'step0',
     component: Home
   },
   {
@@ -19,9 +19,19 @@ const routes = [
     component: () => import('../views/Pre-Requisites.vue')
   },
   {
-    path: `/Patient's_History`,
+    path: `/Patient's-History`,
     name: 'step3',
     component: () => import('../views/PatientHistory.vue')
+  },
+  {
+    path: `/Medical-Orders`,
+    name: 'step4',
+    component: () => import('../views/MedicalOrders.vue')
+  },
+  {
+    path: `/conclusion`,
+    name: 'step5',
+    component: () => import('../views/Conclusion.vue')
   },
 ]
 

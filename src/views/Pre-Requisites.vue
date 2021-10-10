@@ -1,9 +1,16 @@
 <template>
-  <div class="preRequisites">
-    <div class="container">
-      <div class="row" v-for="requisite in pre_requisites" :key="requisite.id">
-        <div class="col-12">
-          <p>{{requisite.requisite}}</p>
+  <div class="preRequisites h-100">
+    <div class="container h-100">
+      <div class="row d-flex align-items-center justify-content-center h-100">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="mb-5">Pre-requisites</h1>
+            <ul>
+              <li v-for="requisite in pre_requisites" :key="requisite.id" class="my-2">
+                {{requisite.requisite}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -30,5 +37,5 @@ export default {
 </script>
 
 <style>
-
+  
 </style>
